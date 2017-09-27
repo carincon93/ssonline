@@ -24,7 +24,7 @@
     </div>
     @endif
     <div class="col-md-12">
-    	<form action="{{url('admin/usuariocrud/'.$user->id)}}" method="post">
+    	<form action="{{url('admin/usuario/'.$user->id)}}" method="post">
             {!! csrf_field() !!}
             {{method_field('put')}}
             <div class="col-md-6">

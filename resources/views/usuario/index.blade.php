@@ -49,10 +49,10 @@
                             <td>{{ $us->sitio_web }}</td>
 
                             <td>
-                                <a class="btn btn-round btn-link"  href="{{ url('admin/usuariocrud/' . $us->id.'/edit')}}">
+                                <a class="btn btn-round btn-link"  href="{{ url('admin/usuario/' . $us->id.'/edit')}}">
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </a>
-                                <form action="{{ url('admin/usuariocrud/' . $us->id)}}" method="POST" style="display: inline-block;">
+                                <form action="{{ url('admin/usuario/' . $us->id)}}" method="POST" style="display: inline-block;">
                                     {{ method_field('delete') }}
                                     {!! csrf_field() !!}
                                     <button type="button" class="btn btn-round btn-delete btn-link">
