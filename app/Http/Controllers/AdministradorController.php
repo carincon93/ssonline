@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User.php;
+use App\User;
 
 class AdministradorController extends Controller
 {
@@ -14,7 +14,8 @@ class AdministradorController extends Controller
      */
     public function index()
     {
-        //
+        $user = user::where("rol", "=", "administrador")->get(['id', 'name', 'email', 'sitio_web']);
+        return view('administrador.index')->with('user', $user);
     }
 
     /**
@@ -24,7 +25,7 @@ class AdministradorController extends Controller
      */
     public function create()
     {
-        //
+        return view('administrador.create');
     }
 
     /**
@@ -35,7 +36,15 @@ class AdministradorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = new User();
+        $user->name         = $request->name;
+        $user->email        = $request->email;
+        $user->sitio_web    = $request->sitio_web;
+        $user->rol          = 'administrador';
+        $user->password     = bcrypt( $request->input('password') );
+        $user->save();
+        return redirect('admin/administrador')->with('status', 'El administrador <strong>'.$user->name.'</strong>
+         fue adicionado con exito!');
     }
 
     /**
@@ -57,7 +66,8 @@ class AdministradorController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = user::find($id);
+        return view('administrador.edit')->with('user', $user);
     }
 
     /**
@@ -69,7 +79,14 @@ class AdministradorController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = user::find($id);
+        $user->name               = $request->get('name');
+        $user->email              = $request->get('email');
+        $user->sitio_web          = $request->get('sitio_web');
+        $user->password           = bcrypt( $request->input('password') );
+        if ($user->save()) {
+            return redirect('/admin/administrador')->with('status', 'El Administrador <strong>'.$user->name.'</strong> fue modificado con exito!');
+        }
     }
 
     /**
@@ -80,6 +97,7 @@ class AdministradorController extends Controller
      */
     public function destroy($id)
     {
-        //
+        user::destroy($id);
+        return redirect('admin/administrador');
     }
 }
