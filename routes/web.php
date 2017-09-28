@@ -17,8 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/nosotros', function ()
 {
     return view('nosotros');
@@ -32,4 +30,13 @@ Route::get('/contactanos', function ()
 Route::get('/seguridad', function ()
 {
     return view('seguridad');
+});
+
+Route::prefix('admin')->group(function () {
+    Route::get('/home', 'HomeController@index');
+    Route::resource('/usuarios', 'UserController')->middleware('admin');
+});
+
+Route::get('/admin', function() {
+    return redirect('/admin/home');
 });

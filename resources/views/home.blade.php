@@ -3,6 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row">
+        @if(Auth::check() && Auth()->user()->rol == 'admin')
+        <ul class="list-unstyled">
+            <a href="{{ url('/admin/usuarios') }}">Usuarios</a>
+        </ul>
+        @endif
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>

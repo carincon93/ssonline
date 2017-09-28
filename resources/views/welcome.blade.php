@@ -30,7 +30,7 @@
             <div class="container">
                 <div class="carousel-text">
                     <p>Disponemos de la <strong>capacidad de respuesta</strong> necesaria que nos permite actuar en el momento y lugar adecuado.</p>
-                    <button class="center-block"><a href="{{ url('capacidad_respuesta') }}">Ver más</a></button>
+                    <a href="{{ url('capacidad_respuesta') }}" class="btn-link carousel-btn">Ver más</a>
                 </div>
         </div>
         </div>

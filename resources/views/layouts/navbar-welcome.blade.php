@@ -25,12 +25,12 @@
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
+                <li><a href="{{ url('nosotros') }}">Nosotros</a></li>
+                <li><a href="{{ url('capacidad_respuesta') }}">Capacidad de respuesta</a></li>
+                <li><a href="{{ url('seguridad') }}">Seguridad</a></li>
+                <li><a href="{{ url('servicios') }}">Servicios</a></li>
+                <li><a href="{{ url('contactanos') }}">Contáctanos</a></li>
                 @guest
-                    <li><a href="{{ url('nosotros') }}">Nosotros</a></li>
-                    <li><a href="{{ url('capacidad_respuesta') }}">Capacidad de respuesta</a></li>
-                    <li><a href="{{ url('seguridad') }}">Seguridad</a></li>
-                    <li><a href="{{ url('servicios') }}">Servicios</a></li>
-                    <li><a href="{{ url('contactanos') }}">Contáctanos</a></li>
                     <li><a href="{{ route('login') }}">Iniciar sesión</a></li>
                 @else
                     <li class="dropdown">
@@ -43,7 +43,7 @@
                                 <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
-                                    Logout
+                                    Cerrar sesión
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

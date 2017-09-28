@@ -13,13 +13,12 @@ body {
     border-color: transparent;
 }
 .form-control {
-    border: 0px;
     box-shadow: none;
 }
 .form-control:focus {
     outline: 0px;
     box-shadow: none;
-    border-color: transparent;
+    border-color: inherit;
 }
 
 .section {
@@ -61,6 +60,7 @@ Contáctanos
     display: flex;
 }
 #form-contact .form-control {
+    border: 0px;
     color: #fff;
     padding-left: 4rem;
 }
@@ -167,6 +167,16 @@ Welcome
     line-height: 1.2;
     width: 72rem;
 }
+.carousel-btn {
+    color: #fff;
+    background: #4a1818;
+    padding: 0.8rem 5rem;
+    transition: all 0.4s ease 0s;
+}
+.carousel-btn:hover {
+    background: #371010;
+    color: #fff;
+}
 .logos-empresas {
     padding: 5rem 0rem;
 }
@@ -238,4 +248,74 @@ Footer
 }
 .footer-welcome {
     border-top: 1px solid #681515;
+}
+
+
+/* ==========================================================================
+Login
+========================================================================== */
+.footer-login {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+.form-wrapper {
+    margin-top: 10rem;
+    padding: 0rem 6rem;
+}
+.form-wrapper .panel-default>.panel-heading {
+    border-color: transparent;
+}
+.form-wrapper .panel-default {
+    border-color: rgba(95, 24, 24, 0.14);
+}
+.form-separator {
+    border-top: 1px solid #cbd2d6;
+    position: relative;
+    margin: 25px 0 10px;
+    text-align: center;
+}
+.form-separator .text-separator {
+    background-color: #fff;
+    padding: 0 .5em;
+    position: relative;
+    color: #999;
+    top: -.7em;
+}
+.checkbox-login {
+    display: inline-block;
+}
+.btn-register,
+.btn-login {
+    display: block;
+    width: 100%;
+}
+
+.btn-login {
+    background-color: #5f1818;
+    color: #fff;
+    transition: all 0.4s ease 0s;
+}
+.btn-login:hover {
+    background-color: #410e0e;
+    color: #fff;
+}
+
+.btn-register {
+    background: #f1d8d8;
+    color: inherit;
+    transition: all 0.4s ease 0s;
+}
+.btn-register:hover {
+    background: #e3bcbc;
+    color: inherit;
+}
+
+.inline-list {
+    display: flex;
+    justify-content: space-between;
+}
+.inline-list li {
+    display: inline-block;
 }
