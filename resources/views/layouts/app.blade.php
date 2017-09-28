@@ -77,7 +77,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
-    <script src="{{ asset('js/custom.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('js/master.js') }}" charset="utf-8"></script>
     @stack('scripts')
 </body>
 </html>
