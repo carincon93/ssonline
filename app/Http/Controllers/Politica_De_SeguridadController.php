@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-class UserController extends Controller
+use App\Politica_De_Seguridad;
+class Politica_De_SeguridadController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = user::where("rol", "=", "cliente")->get(['id', 'name', 'email', 'sitio_web']);
-        return view('usuario.index')->with('user', $user);
+        $politica_de_seguridad = politica_de_seguridad::all();
+        return view('politicas_de_seguridad.index')->with('politica_de_seguridad', $politica_de_seguridad);
     }
 
     /**
@@ -24,7 +24,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        
+        return view('politicas_de_seguridad.create');
     }
 
     /**
@@ -35,7 +35,10 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $politica_de_seguridad               = new Politica_de_seguridad();
+        $politica_de_seguridad->descripcion  = $request->descripcion;
+        $politica_de_seguridad->save();
+        return redirect('admin/politicas/')->with('status', 'La politica de seguridad <strong>'.$politica_de_seguridad->descripcion.'</strong>fue adicionado con exito!');
     }
 
     /**
@@ -57,8 +60,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = user::find($id);
-        return view('usuario.edit')->with('user', $user);
+        $politica_de_seguridad = politica_de_seguridad::find($id);
+        return view('politicas_de_seguridad.edit')->with('politica_de_seguridad', $politica_de_seguridad);
     }
 
     /**
@@ -70,14 +73,10 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = user::find($id);
-        $user->name               = $request->get('name');
-        $user->email              = $request->get('email');
-        $user->sitio_web          = $request->get('sitio_web');
-        $user->password           = bcrypt( $request->input('password') );
-        if ($user->save()) {
-            return redirect('admin/usuario')->with('status', 'El Usuario <strong>'.$user->name.'</strong> fue modificado con exito!');
-        }
+        $politica_de_seguridad = politica_de_seguridad::find($id);
+        $politica_de_seguridad->descripcion  = $request->descripcion;
+        $politica_de_seguridad->save();
+        return redirect('admin/politicas/')->with('status', 'La politica de seguridad <strong>'.$politica_de_seguridad->descripcion.'</strong>fue modificado con exito!');
     }
 
     /**
@@ -88,7 +87,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        user::destroy($id);
-        return redirect('admin/usuario');
+        politica_de_seguridad::destroy($id);
+        return redirect('admin/politicas/'); 
     }
 }

@@ -19,3 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/admin/usuario', 'UserController');
+Route::resource('/admin/servicios', 'ServicioController');
+Route::resource('/admin/politicas', 'Politica_De_SeguridadController');
+
+
+
