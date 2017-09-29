@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-
-class UserController extends Controller
+use App\Servicio;
+class ServicioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = User::where("rol", "=", "cliente")->get(['id', 'name', 'email', 'sitio_web']);
-        return view('usuario.index')->with('user', $user);
+        $servicio = Servicio::all();
+        return view('servicios.index')->with('servicio', $servicio);
     }
 
     /**
@@ -25,7 +24,7 @@ class UserController extends Controller
      */
     public function create()
     {
-
+        return view('servicios.create');
     }
 
     /**
@@ -36,7 +35,12 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $servicio               = new Servicio();
+        $servicio->descripcion  = $request->descripcion;
+        $servicio->tipo_servicio  = $request->tipo_servicio;
+
+        $servicio->save();
+        return redirect('admin/servicios/')->with('status', 'El servicio '.$servicio->descripcion.' fue adicionado con exito!');
     }
 
     /**
@@ -58,8 +62,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::find($id);
-        return view('usuario.edit')->with('user', $user);
+        $servicio = Servicio::find($id);
+        return view('servicios.edit')->with('servicio', $servicio);
     }
 
     /**
@@ -71,14 +75,12 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = user::find($id);
-        $user->name               = $request->get('name');
-        $user->email              = $request->get('email');
-        $user->sitio_web          = $request->get('sitio_web');
-        $user->password           = bcrypt( $request->input('password') );
-        if ($user->save()) {
-            return redirect('admin/usuario')->with('status', 'El Usuario '.$user->name.' fue modificado con exito!');
-        }
+        $servicio = Servicio::find($id);
+        $servicio->descripcion  = $request->descripcion;
+        $servicio->tipo_servicio  = $request->tipo_servicio;
+        $servicio->save();
+        return redirect('admin/servicios/')->with('status', 'El servicio '.$servicio->descripcion.' fue modificado con exito!');
+
     }
 
     /**
@@ -89,7 +91,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        User::destroy($id);
-        return redirect('admin/usuario')->with('status', 'El usuaario fue eliminado con éxito');
+        Servicio::destroy($id);
+        return redirect('admin/servicios/')->with('status', 'El servicio fue eliminado con éxito');
     }
 }

@@ -50,6 +50,40 @@ a, a:hover {
     background-color: transparent;
 }
 
+.center-block {
+    display: block !important;
+}
+.btn-link:hover,
+.btn-link {
+    color: inherit;
+}
+
+.not-background {
+    background: transparent !important;
+}
+.table>thead>tr>th {
+    vertical-align: bottom;
+     border-bottom: 0px;
+}
+.new-btn-danger {
+    background: rgb(226, 36, 36);
+    color: #fff;
+}
+
+.btn:focus {
+    color: inherit;
+    outline: 0px;
+}
+
+/* ==========================================================================
+Servicios
+========================================================================== */
+.logo-servicios {
+    -webkit-animation-delay: 0.8s;
+    color: #e5b3b3;
+    font-size: 8rem;
+}
+
 
 /* ==========================================================================
 Contáctanos
@@ -95,7 +129,7 @@ Contáctanos
 }
 .text-contact {
     background: transparent;
-    border-bottom: 1px solid #681515;
+    border-bottom: 1px solid #681515 !important;
     border-radius: 0px;
     box-shadow: none;
 }
@@ -134,8 +168,21 @@ Contáctanos
 /* ==========================================================================
 Seguridad
 ========================================================================== */
+.seguridad {
+    overflow: hidden;
+}
 .list-politicas {
     line-height: 2;
+    position: relative;
+}
+.list-poli::after {
+    background: url(../images/laptop-flat.png) no-repeat center center;
+    content: '';
+    height: 481px;
+    position: absolute;
+    right: -45rem;
+    top: 0;
+    width: 100%;
 }
 .title-seguridad {
     -webkit-animation-delay: 0.4s;
@@ -148,6 +195,12 @@ Seguridad
 /* ==========================================================================
 Welcome
 ========================================================================== */
+.btn-welcome {
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 26rem;
+}
 .owl-item img {
     height: 465px;
     object-fit: cover;
@@ -176,6 +229,33 @@ Welcome
 .carousel-btn:hover {
     background: #371010;
     color: #fff;
+}
+.info-welcome {
+    background: radial-gradient(circle farthest-side at center bottom,#542424,#400a0a 125%);
+    color: #fff;
+    margin-top: 70rem;
+    padding: 10rem 0 13rem;
+    position: relative;
+}
+.info-welcome h2 {
+    margin-bottom: 5rem;
+}
+.info-welcome img {
+    position: absolute;
+    top: -460px;
+    left: 0;
+    right: 0;
+    background: url(../images/laptop.png) center center no-repeat !important;
+    background-size: contain;
+    z-index: 10;
+}
+.registrarse {
+    background-color: #f7f9fa;
+    color: #666;
+    padding: 9rem 0rem;
+}
+.registrarse a {
+    margin-top: 4rem;
 }
 .logos-empresas {
     padding: 5rem 0rem;
@@ -207,6 +287,9 @@ Nosotros
 }
 .logo-nosotros {
     border-right: 1px solid #e2e2e2;
+}
+.padding-article {
+    padding: 5rem 0;
 }
 
 /* ==========================================================================
@@ -291,24 +374,25 @@ Login
     display: block;
     width: 100%;
 }
-
+.btn-register,
 .btn-login {
     background-color: #5f1818;
     color: #fff;
     transition: all 0.4s ease 0s;
 }
+.btn-register,
 .btn-login:hover {
     background-color: #410e0e;
     color: #fff;
 }
 
 .btn-register {
-    background: #f1d8d8;
+    background: #f7f9fa;
     color: inherit;
     transition: all 0.4s ease 0s;
 }
 .btn-register:hover {
-    background: #e3bcbc;
+    background: #dddddd;
     color: inherit;
 }
 
@@ -318,4 +402,47 @@ Login
 }
 .inline-list li {
     display: inline-block;
+}
+
+.register-wrapper {
+    display: flex;
+    margin-top: 10rem;
+}
+.register-wrapper div:nth-child(1){
+    border-right: 1px solid #eee;
+}
+
+
+/* ==========================================================================
+Dashboard
+========================================================================== */
+#sidebar {
+    background: #eee;
+    padding: 1rem;
+    position: fixed;
+    height: 100%;
+    width: 260px;
+}
+#sidebar-logo {
+    padding: 2rem 1rem;
+}
+.nav-sidebar li a {
+    background: #e6e6e6;
+    display: block;
+    margin-bottom: 0.6rem;
+    padding: 1rem;
+}
+.dashboard-wrapper {
+    padding-left: 260px;
+}
+.dashboard-content {
+    padding: 4rem;
+}
+
+.actions-tbl {
+    display: block;
+    width: 12rem;
+}
+.group-list {
+    padding: 1rem;
 }

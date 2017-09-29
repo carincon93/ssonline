@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,12 +28,26 @@ Route::get('/contactanos', function ()
 
 Route::get('/seguridad', function ()
 {
-    return view('seguridad');
+    $politicas = App\Politica_De_Seguridad::all();
+    return view('seguridad')->with('politicas', $politicas);
+});
+
+Route::get('/servicios', function ()
+{
+    $servicios = App\Servicio::all();
+    return view('servicios')->with('servicios', $servicios);
+});
+
+Route::get('/capacidad_respuesta', function ()
+{
+    return view('capacidad');
 });
 
 Route::prefix('admin')->group(function () {
     Route::get('/home', 'HomeController@index');
     Route::resource('/usuarios', 'UserController')->middleware('admin');
+    Route::resource('/servicios', 'ServicioController')->middleware('admin');
+    Route::resource('/politicas', 'Politica_De_SeguridadController')->middleware('admin');
 });
 
 Route::get('/admin', function() {

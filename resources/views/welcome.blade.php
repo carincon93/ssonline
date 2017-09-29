@@ -30,16 +30,43 @@
             <div class="container">
                 <div class="carousel-text">
                     <p>Disponemos de la <strong>capacidad de respuesta</strong> necesaria que nos permite actuar en el momento y lugar adecuado.</p>
-                    <a href="{{ url('capacidad_respuesta') }}" class="btn-link carousel-btn">Ver más</a>
+                    <a href="{{ url('capacidad_respuesta') }}" class="btn-link carousel-btn">Más información</a>
                 </div>
+            </div>
         </div>
+    </div>
+    <div class="info-welcome">
+        <div class="container">
+            <img src="{{ asset('images/laptop.png')}}" alt="laptop" class="img-responsive center-block">
+            <h2 class="text-center">Empieza a usar SSOnline</h2>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Nuestra empresa</h3>
+                    <p>
+                        Nuestra compañía orgullosamente Colombiana cuenta con un año como sociedad constituida.
+                    </p>
+                    <a href="{{ url('nosotros') }}" class="btn-link"><strong>Más información</strong></a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Respuesta oportuna</h3>
+                    <p>
+                        Estamos en capacidad de adaptarnos a su sistema operacional y lineamiento requerido por sus áreas.
+                    </p>
+                    <a href="{{ url('capacidad_respuesta') }}" class="btn-link"><strong>Más información</strong></a>
+                </div>
+                <div class="col-md-4">
+                    <h3>Te ofrecemos diferentes tipos de servicios</h3>
+                    <a href="{{ url('servicios') }}" class="btn-link"><strong>Más información</strong></a>
+                </div>
+            </div>
         </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
+    </div>
+    <div class="registrarse">
+        <div class="container">
+            <h2 class="text-center">Empieza a usar SSOnline y aprovecha de sus ventajas</h2>
+            <a href="{{ route('register') }}" class="btn-link carousel-btn btn-welcome">Registrarse</a>
+        </div>
     </div>
     <div class="logos-empresas">
         <div class="container">

@@ -1,40 +1,36 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Administración de usuarios')
+@section('title', 'Administracion de políticas de seguridad')
 
 @section('content')
     @include('layouts.modal_eliminar')
     <div class="dashboard-content">
         @include('layouts.messages')
+        <a href="{{ url('admin/politicas/create') }}" class="btn btn-success">Añadir</a>
         <div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Nombre</th>
-                        <th>Correo electrónico</th>
-                        <th>Sitio web</th>
+                        <th>Descripción</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     @php
-                    $count = 1;
+                    $count =1;
                     @endphp
-                    @foreach($user as $us)
+                    @foreach($politica_de_seguridad as $pol)
                     <tr>
                         <td>{{ $count++ }}</td>
-                        <td>{{ $us->name }}</td>
-                        <td>{{ $us->email }}</td>
-                        <td>{{ $us->sitio_web }}</td>
-
+                        <td>{{ $pol->descripcion }}</td>
                         <td class="actions-tbl">
-                            <a class="btn btn-round btn-link"  href="{{ url('admin/usuarios/' . $us->id.'/edit')}}">
+                            <a class="btn btn-round btn-link"  href="{{ url('admin/politicas/' . $pol->id.'/edit')}}">
                                 <i class="fa fa-fw fa-edit"></i>
                             </a>
-                            <form action="{{ url('admin/usuario/' . $us->id)}}" method="POST" style="display: inline-block;">
+                            <form action="{{ url('admin/politicas/' . $pol->id)}}" method="POST" style="display: inline-block;">
                                 {{ method_field('delete') }}
-                                {{ csrf_field() }}
+                                {!! csrf_field() !!}
                                 <button type="button" class="btn btn-round btn-delete btn-link">
                                     <i class="fa fa-fw fa-trash"></i>
                                 </button>
@@ -44,6 +40,7 @@
                     @endforeach
                 </tbody>
             </table>
+
         </div>
     </div>
 @endsection

@@ -13,22 +13,10 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <h3 class="text-uppercase">Políticas de seguridad</h3>
-                <ul class="list-politicas">
-                    <li> Monitoreo transaccional de DIGICERT en línea ante vulnerabilidades y software malicioso. </li>
-                    <li> Nuestra plataforma transaccional CWEB se encuentra en un Data Center. </li>
-                    <li> Bloqueo automático de transacciones ante detecciones de fraude. </li>
-                    <li> Sistema antifraude de transacciones. </li>
-                    <li> Certificado de seguridad y de vulnerabilidades DIGICERT. </li>
-                    <li> Acceso a la plataforma de pagos segura autorizado por Redeban. </li>
-                    <li> Correo electrónico con confirmación de compra. </li>
-                    <li> Monitoreo transaccional de DIGICERT en línea ante vulnerabilidades y software malicioso. </li>
-                    <li> Nuestra plataforma transaccional SSONLINE cuenta con multiusuarios para cada propósito. </li>
-                    <li> Bloqueo automático de transacciones ante detecciones de fraude. </li>
-                    <li> Validación de identificación SIRI </li>
-                    <li> Autonomía en montos por transacción. </li>
-                    <li> Centro de control de transacciones de revisión manual. </li>
-                    <li> Disponibilidad de switch transaccional superior a 99.9 %. </li>
-                    <li> Soporte en línea a través de www.ssonline.co </li>
+                <ul class="list-politicas list-poli">
+                    @foreach($politicas as $politica)
+                        <li>{{ $politica->descripcion }}</li>
+                    @endforeach
                 </ul>
             </div>
         </div>
