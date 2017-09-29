@@ -10,6 +10,12 @@
         <img src="{{ asset('images/logo-headphones.png') }}" alt="" class="center-block img-responsive img-seguridad animated fadeInUp">
     </div>
     <div class="container section">
+        <div class="page-header">
+            <p>
+                Disponemos de la capacidad de respuesta necesaria que nos permite actuar en el momento y lugar adecuado,
+                para aprovechar las oportunidades que presenten las diferentes variables del mercado.
+            </p>
+        </div>
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="padding-article">
