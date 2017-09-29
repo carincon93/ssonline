@@ -63,9 +63,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        if ($data['foto']) {
+        if (isset($data['foto'])) {
             $file = time().'.'.$data['foto']->getClientOriginalExtension();
             $data['foto']->move(public_path('images'), $file);
+        } else {
+            $file = 'foto-default.png';
         }
         return User::create([
             'name'      => $data['name'],

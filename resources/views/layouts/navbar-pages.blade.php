@@ -46,7 +46,7 @@
                             </li>
                             @else
                             <li>
-                                <a href="{{ url('/admin/home') }}">Mi perfil</a>
+                                <a href="{{ url('/admin/home') }}">Mi cuenta</a>
                             </li>
                             @endif
                             <li>

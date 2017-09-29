@@ -9,6 +9,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/agregar_servicio', 'ServiciosController@agregar_servicio');
 
 Route::get('/', function () {
     return view('welcome');
@@ -47,8 +48,24 @@ Route::get('/capacidad_respuesta', function ()
 });
 
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->group(function ()
+{
     Route::get('/home', 'HomeController@index');
+    Route::get('/editar_perfil', function ()
+    {
+        return view('editar_perfil');
+    });
+    Route::get('/adquirir_servicios', function ()
+    {
+        $servicios = App\Servicio::all();
+        return view('adquirir_servicios')->with('servicios', $servicios);
+    });
+
+    Route::get('/lista_servicios', function ()
+    {
+        $servicios = App\Servicio_adquirido::all();
+        return view('usuario.lista_servicios')->with('servicios', $servicios);
+    });
     Route::resource('/usuarios', 'UserController')->middleware('admin');
     Route::resource('/servicios', 'ServicioController')->middleware('admin');
     Route::resource('/politicas', 'Politica_De_SeguridadController')->middleware('admin');

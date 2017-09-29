@@ -48,7 +48,7 @@
                         <div class="form-group{{ $errors->has('foto') ? ' has-error' : '' }}">
                             <div class="">
                                 <label for="foto">Foto</label>
-                                <input id="foto" type="file" class="form-control" name="foto" required>
+                                <input id="foto" type="file" class="form-control" name="foto">
 
                                 @if ($errors->has('foto'))
                                 <span class="help-block">

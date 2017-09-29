@@ -12,4 +12,9 @@ class Servicio extends Model
         'descripcion',
         'tipo_servicio',
     ];
+
+    public function servicios_adquiridos()
+    {
+    	return $this->hasMany('App\Servicio_adquirido');
+    }
 }

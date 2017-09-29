@@ -423,9 +423,9 @@ Dashboard
 }
 .foto-perfil {
     border-radius: 50%;
-    height: 120px;
+    height: 100px;
     margin-bottom: 0.5rem;
-    width: 120px;
+    width: 100px;
 }
 .user-name {
     display: block;
@@ -460,4 +460,11 @@ Dashboard
 }
 .group-list {
     padding: 1rem;
+}
+
+
+.card-servicios {
+    background: #eee;
+    margin-bottom: 2rem;
+    padding: 3rem;
 }
