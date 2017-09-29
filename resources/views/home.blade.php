@@ -1,5 +1,7 @@
 @extends('layouts.dashboard')
 
+@section('title', 'Dashboard')
+
 @section('content')
     <div class="dashboard-content">
         <div class="col-md-8 col-md-offset-2">
@@ -12,6 +14,7 @@
                         {{ session('status') }}
                     </div>
                     @endif
+<<<<<<< HEAD
                     <div class="row">
                         <div class="col-md-4">
                             <div class="">
@@ -69,6 +72,10 @@
                         <button class="btn btn-success">Modificar</button>
                     </form>
                     @endif
+=======
+
+                    Usted está conectado!
+>>>>>>> a6960721c1e3d45580b181dc8b869c6045df058e
                 </div>
             </div>
         </div>
