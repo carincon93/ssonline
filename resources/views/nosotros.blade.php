@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Seguridad')
+@section('title', 'Nosotros')
 
 @section('content')
 @include('layouts.navbar-pages')

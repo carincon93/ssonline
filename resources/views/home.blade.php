@@ -1,5 +1,7 @@
 @extends('layouts.dashboard')
 
+@section('title', 'Dashboard')
+
 @section('content')
     <div class="dashboard-content">
         <div class="col-md-8 col-md-offset-2">
@@ -12,7 +14,7 @@
                         {{ session('status') }}
                     </div>
                     @endif
-                    
+
                     Usted está conectado!
                 </div>
             </div>
