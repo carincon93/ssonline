@@ -32,7 +32,7 @@
                         <p>{{ $servicio->descripcion }}</p>
                         <form action="" id="form-adquirir" method="POST">
                             {{ csrf_field() }}
-                            <button class="agregar-servicio" type="button" data-idservicio="{{ $servicio->id }}" data-iduser="{{ Auth::user()->id }}" data-toggle="modal" data-target="#myModal">Adquirir servicio</button>
+                            <button class="agregar-servicio" type="button" data-servicio="{{ $servicio->descripcion }}" data-usuario="{{ Auth::user()->name }}" data-email="{{ Auth::user()->email }}" data-toggle="modal" data-target="#myModal">Adquirir servicio</button>
                         </form>
                     </div>
                 </div>

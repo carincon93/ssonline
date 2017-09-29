@@ -22,9 +22,9 @@
                     @foreach($servicios as $servicio)
                     <tr>
                         <td>{{ $count++ }}</td>
-                        <td>{{ $servicio->user->name }}</td>
-                        <td>{{ $servicio->user->email }}</td>
-                        <td>{{ $servicio->servicio->descripcion }}</td>
+                        <td>{{ $servicio->nombre_usuario }}</td>
+                        <td>{{ $servicio->email_usuario }}</td>
+                        <td>{{ $servicio->servicio }}</td>
                     </tr>
                     @endforeach
                 </tbody>

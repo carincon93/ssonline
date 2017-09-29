@@ -26,9 +26,5 @@ class User extends Authenticatable
     protected $hidden = [
         'rol', 'password', 'remember_token',
     ];
-
-    public function servicios_adquiridos()
-    {
-    	return $this->hasMany('App\Servicio_adquirido');
-    }
+    
 }

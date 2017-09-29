@@ -30,7 +30,7 @@ class LoginController extends Controller
     // protected $redirectTo = '/admin/home';
     protected function authenticated(Request $request)
     {
-        if ( Auth::check() && Auth::user()->rol == 'admin')
+        if ( Auth::check())
         {
             // Do your margic here
             return redirect('/admin/home');

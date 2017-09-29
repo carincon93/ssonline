@@ -15,10 +15,9 @@ class CreateServiciosAdquiridosTable extends Migration
     {
         Schema::create('servicios_adquiridos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
-            $table->integer('servicio_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('servicio_id')->references('id')->on('servicios');
+            $table->string('nombre_usuario');
+            $table->string('email_usuario');
+            $table->text('servicio');
             $table->timestamps();
         });
     }

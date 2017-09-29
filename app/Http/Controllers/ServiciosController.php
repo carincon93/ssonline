@@ -13,8 +13,9 @@ class ServiciosController extends Controller
     public function agregar_servicio(Request $request)
     {
         $servicio = new Servicio_adquirido();
-        $servicio->user_id = $request->user_id;
-        $servicio->servicio_id = $request->servicio_id;
+        $servicio->nombre_usuario = $request->nombre_usuario;
+        $servicio->email_usuario = $request->email_usuario;
+        $servicio->servicio = $request->servicio;
         $servicio->save();
     }
 }

@@ -9,17 +9,8 @@ class Servicio_adquirido extends Model
     protected $table = 'servicios_adquiridos';
 
     protected $fillable = [
-        'user_id',
-        'servicio_id',
+        'nombre_usuario',
+        'email_usuario',
+        'servicio',
     ];
-
-    public function user()
-    {
-    	return $this->belongsTo('App\User');
-    }
-
-    public function servicio()
-    {
-        return $this->belongsTo('App\Servicio');
-    }
 }

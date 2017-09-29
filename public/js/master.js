@@ -12,12 +12,14 @@ $(document).ready(function() {
     $('body').on('click', '.agregar-servicio', function(event) {
         event.preventDefault();
         $token =  $('#form-adquirir').find('input[name="_token"]').val();
-        $servicio_id =  $(this).attr('data-idservicio');
-        $user_id = $(this).attr('data-iduser');
+        $nombre_usuario = $(this).attr('data-usuario');
+        $email_usuario = $(this).attr('data-email');
+        $servicio =  $(this).attr('data-servicio');
         $.post('agregar_servicio',
         {
-            user_id: $user_id,
-            servicio_id: $servicio_id,
+            nombre_usuario: $nombre_usuario,
+            email_usuario: $email_usuario,
+            servicio: $servicio,
             _token: $token
 
         }, function(data, textStatus, xhr) {
