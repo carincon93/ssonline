@@ -32,7 +32,7 @@
                             <a class="btn btn-round btn-link"  href="{{ url('admin/usuarios/' . $us->id.'/edit')}}">
                                 <i class="fa fa-fw fa-edit"></i>
                             </a>
-                            <form action="{{ url('admin/usuario/' . $us->id)}}" method="POST" style="display: inline-block;">
+                            <form action="{{ url('admin/usuarios/' . $us->id)}}" method="POST" style="display: inline-block;">
                                 {{ method_field('delete') }}
                                 {{ csrf_field() }}
                                 <button type="button" class="btn btn-round btn-delete btn-link">

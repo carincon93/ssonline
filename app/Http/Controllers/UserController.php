@@ -74,7 +74,7 @@ class UserController extends Controller
         $user = User::find($id);
         $user->name               = $request->get('name');
         $user->email              = $request->get('email');
-        
+
         if ($request->file('foto')) {
             $file_foto           = $request->file('foto')->getClientOriginalName();
             $user->foto = '/images/' . $file_foto;
@@ -97,6 +97,6 @@ class UserController extends Controller
     public function destroy($id)
     {
         User::destroy($id);
-        return redirect('admin/usuario')->with('status', 'El usuaario fue eliminado con éxito');
+        return redirect('admin/usuarios')->with('status', 'El usuaario fue eliminado con éxito');
     }
 }

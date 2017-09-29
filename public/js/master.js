@@ -14,7 +14,7 @@ $(document).ready(function() {
         $token =  $('#form-adquirir').find('input[name="_token"]').val();
         $servicio_id =  $(this).attr('data-idservicio');
         $user_id = $(this).attr('data-iduser');
-        $.post('/agregar_servicio',
+        $.post('agregar_servicio',
         {
             user_id: $user_id,
             servicio_id: $servicio_id,
