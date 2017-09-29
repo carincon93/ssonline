@@ -14,14 +14,13 @@
                         {{ session('status') }}
                     </div>
                     @endif
-<<<<<<< HEAD
                     <div class="row">
                         <div class="col-md-4">
                             <div class="">
                                 <a href="{{ url('/admin/usuarios') }}" class="text-center card-dashboard">
                                     Usuarios
                                     <div class="">
-                                        <i class="fa fa-fw fa-user fa-4x icon-dashboard"></i>                                        
+                                        <i class="fa fa-fw fa-user fa-4x icon-dashboard"></i>
                                     </div>
                                 </a>
                             </div>
@@ -72,10 +71,6 @@
                         <button class="btn btn-success">Modificar</button>
                     </form>
                     @endif
-=======
-
-                    Usted está conectado!
->>>>>>> a6960721c1e3d45580b181dc8b869c6045df058e
                 </div>
             </div>
         </div>
