@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-09-2017 a las 00:13:04
--- Versión del servidor: 10.1.25-MariaDB
--- Versión de PHP: 7.1.7
+-- Tiempo de generación: 29-09-2017 a las 18:38:51
+-- Versión del servidor: 10.1.24-MariaDB
+-- Versión de PHP: 7.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -74,8 +74,8 @@ CREATE TABLE `politicas_de_seguridad` (
 --
 
 INSERT INTO `politicas_de_seguridad` (`id`, `descripcion`, `created_at`, `updated_at`) VALUES
-(1, 'Monitoreo transaccional de DIGICERT en línea ante vulnerabilidades y software malicioso.', '2017-09-28 22:09:58', '2017-09-28 22:09:58'),
-(2, 'Nuestra plataforma transaccional CWEB se encuentra en un Data Center.', '2017-09-28 22:10:11', '2017-09-28 22:10:11'),
+(1, 'Monitoreo transaccional de DIGICERT en línea ante vulnerabilidades y software malicioso.', '2017-09-29 03:09:58', '2017-09-29 03:09:58'),
+(2, 'Nuestra plataforma transaccional CWEB se encuentra en un Data Center.', '2017-09-29 03:10:11', '2017-09-29 03:10:11'),
 (3, 'Bloqueo automático de transacciones ante detecciones de fraude.', NULL, NULL),
 (4, 'Sistema antifraude de transacciones.', NULL, NULL),
 (5, 'Certificado de seguridad y de vulnerabilidades DIGICERT.', NULL, NULL),
@@ -109,22 +109,22 @@ CREATE TABLE `servicios` (
 --
 
 INSERT INTO `servicios` (`id`, `descripcion`, `tipo_servicio`, `created_at`, `updated_at`) VALUES
-(1, 'Análisis y desarrollo de planes de mercadeo orientados a habilitar estrategias de CRM \r\n(Costumer Relation  Managment).', 'servicios estrategicos', '2017-09-28 22:06:20', '2017-09-28 22:06:20'),
-(2, 'Análisis de Información.', 'servicios estrategicos', '2017-09-28 22:06:30', '2017-09-28 22:06:30'),
-(3, 'Procesamiento de Información.', 'servicios estrategicos', '2017-09-28 22:06:38', '2017-09-28 22:06:38'),
-(4, 'Transacción electrónica.', 'servicios estrategicos', '2017-09-28 22:06:53', '2017-09-28 22:06:53'),
-(5, 'Implantación e implementación de tecnología de punta.', 'servicios tecnologicos', '2017-09-28 22:07:17', '2017-09-28 22:07:17'),
-(6, 'Herramientas de control y gestión.', 'servicios tecnologicos', '2017-09-28 22:07:25', '2017-09-28 22:07:25'),
-(7, 'Informe y reportes en línea para la toma de decisiones.', 'servicios tecnologicos', '2017-09-28 22:07:35', '2017-09-28 22:07:35'),
-(8, 'Comunicación.', 'servicios tecnologicos', '2017-09-28 22:07:43', '2017-09-28 22:07:43'),
-(9, 'A partir de herramientas tecnológicas y de modelos estratégicos desarrollamos campañas de comunicación desde diversos puntos de su compañía para el consumidor, las cuales interactúan independiente y complementariamente para ayudarle a su compañía cumplir con  sus clientes el \r\nobjetivo de marca y mercado de una forma medible y \r\nconstante.', 'servicios tecnologicos', '2017-09-28 22:07:54', '2017-09-28 22:07:54'),
-(10, 'Diseño y Desarrollo de websites.', 'servicios interactivos', '2017-09-28 22:08:22', '2017-09-28 22:08:22'),
-(11, 'Campañas de mercadeo Online.', 'servicios interactivos', '2017-09-28 22:08:34', '2017-09-28 22:08:34'),
-(12, 'Diseño y desarrollo de portales de Mercadeo.', 'servicios interactivos', '2017-09-28 22:08:42', '2017-09-28 22:08:42'),
-(13, 'Adquisición, actualización y exploración de Bases de Datos.', 'servicios interactivos', '2017-09-28 22:08:50', '2017-09-28 22:08:50'),
-(14, 'Email Marketing.', 'servicios interactivos', '2017-09-28 22:08:58', '2017-09-28 22:08:58'),
-(15, 'Servicios de audio Respuesta (IVR).', 'servicios interactivos', '2017-09-28 22:09:06', '2017-09-28 22:09:06'),
-(16, 'Carrito de compras.', 'servicios interactivos', '2017-09-28 22:09:18', '2017-09-28 22:09:18');
+(1, 'Análisis y desarrollo de planes de mercadeo orientados a habilitar estrategias de CRM \r\n(Costumer Relation  Managment).', 'servicios estrategicos', '2017-09-29 03:06:20', '2017-09-29 03:06:20'),
+(2, 'Análisis de Información.', 'servicios estrategicos', '2017-09-29 03:06:30', '2017-09-29 03:06:30'),
+(3, 'Procesamiento de Información.', 'servicios estrategicos', '2017-09-29 03:06:38', '2017-09-29 03:06:38'),
+(4, 'Transacción electrónica.', 'servicios estrategicos', '2017-09-29 03:06:53', '2017-09-29 03:06:53'),
+(5, 'Implantación e implementación de tecnología de punta.', 'servicios tecnologicos', '2017-09-29 03:07:17', '2017-09-29 03:07:17'),
+(6, 'Herramientas de control y gestión.', 'servicios tecnologicos', '2017-09-29 03:07:25', '2017-09-29 03:07:25'),
+(7, 'Informe y reportes en línea para la toma de decisiones.', 'servicios tecnologicos', '2017-09-29 03:07:35', '2017-09-29 03:07:35'),
+(8, 'Comunicación.', 'servicios tecnologicos', '2017-09-29 03:07:43', '2017-09-29 03:07:43'),
+(9, 'A partir de herramientas tecnológicas y de modelos estratégicos desarrollamos campañas de comunicación desde diversos puntos de su compañía para el consumidor, las cuales interactúan independiente y complementariamente para ayudarle a su compañía cumplir con  sus clientes el \r\nobjetivo de marca y mercado de una forma medible y \r\nconstante.', 'servicios tecnologicos', '2017-09-29 03:07:54', '2017-09-29 03:07:54'),
+(10, 'Diseño y Desarrollo de websites.', 'servicios interactivos', '2017-09-29 03:08:22', '2017-09-29 03:08:22'),
+(11, 'Campañas de mercadeo Online.', 'servicios interactivos', '2017-09-29 03:08:34', '2017-09-29 03:08:34'),
+(12, 'Diseño y desarrollo de portales de Mercadeo.', 'servicios interactivos', '2017-09-29 03:08:42', '2017-09-29 03:08:42'),
+(13, 'Adquisición, actualización y exploración de Bases de Datos.', 'servicios interactivos', '2017-09-29 03:08:50', '2017-09-29 03:08:50'),
+(14, 'Email Marketing.', 'servicios interactivos', '2017-09-29 03:08:58', '2017-09-29 03:08:58'),
+(15, 'Servicios de audio Respuesta (IVR).', 'servicios interactivos', '2017-09-29 03:09:06', '2017-09-29 03:09:06'),
+(16, 'Carrito de compras.', 'servicios interactivos', '2017-09-29 03:09:18', '2017-09-29 03:09:18');
 
 -- --------------------------------------------------------
 
@@ -136,6 +136,7 @@ CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `foto` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '/images/foto-default.png',
   `sitio_web` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `rol` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'cliente',
   `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -148,8 +149,8 @@ CREATE TABLE `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `sitio_web`, `rol`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Yaneth', 'yaneth@mail.com', 'google.com', 'admin', '$2y$10$5HFmvRzJE.ZR7vWHhzkTLOWY9U4BHRsQmo.abxKl7LEFAUc0RnVvu', NULL, '2017-09-28 21:55:22', '2017-09-28 21:55:22');
+INSERT INTO `users` (`id`, `name`, `email`, `foto`, `sitio_web`, `rol`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Yaneth', 'yaneth@mail.com', '/images/web.png', 'google.com', 'admin', '$2y$10$TlzlwE8h1eNhs/Gdxyu.beTFuKG0sqJA484CFz.E7tWzB2WnYY0Te', NULL, '2017-09-29 02:55:22', '2017-09-29 16:27:29');
 
 --
 -- Índices para tablas volcadas

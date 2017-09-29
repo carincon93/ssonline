@@ -14,6 +14,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::put('/home/usuario/{id}', 'UserController@update');
+
+
 Auth::routes();
 
 Route::get('/nosotros', function ()
@@ -42,6 +45,7 @@ Route::get('/capacidad_respuesta', function ()
 {
     return view('capacidad');
 });
+
 
 Route::prefix('admin')->group(function () {
     Route::get('/home', 'HomeController@index');

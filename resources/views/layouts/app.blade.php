@@ -14,6 +14,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/aos.css') }}" rel="stylesheet">
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/master.css') }}" rel="stylesheet">
 </head>
@@ -25,6 +26,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('js/aos.js') }}" charset="utf-8"></script>
     <script src="{{ asset('js/master.js') }}" charset="utf-8"></script>
     @stack('scripts')
 </body>

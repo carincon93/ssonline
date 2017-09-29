@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Seguridad')
+@section('title', 'Nosotros')
 
 @section('content')
 @include('layouts.navbar-pages')
@@ -24,11 +24,12 @@
     <div class="container section">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <div class="sec-nosotros">
+                <div class="sec-nosotros" data-aos="fade-up">
                     <div class="page-header">
-                        <h3 class="text-uppercase text-center">Nuestra Misión</h3>
+                        <h3 class="text-uppercase text-center" data-aos-once="true">Nuestra Misión</h3>
+                        <img src="{{ asset('images/objetivos.png') }}" alt="" class="img-responsive center-block">
                     </div>
-                    <p>
+                    <p class="text-center">
                         Posicionarnos como una empresa transaccional de alta flexibilidad, dentro de los más altos
                         estándares de servicio, capaz de brindar una rápida adecuación de las necesidades especificas
                         de nuestros clientes, ofreciendo amplios conocimientos en los procesos operativos y de
@@ -38,21 +39,24 @@
                     </p>
                 </div>
 
-                <div class="sec-nosotros">
+                <div class="sec-nosotros" data-aos="fade-up" data-aos-once="true">
                     <div class="page-header">
                         <h3 class="text-uppercase text-center">Nuestra Visión</h3>
+                        <img src="{{ asset('images/building.png') }}" alt="" class="img-responsive center-block">
                     </div>
-                    <p>
+                    <p class="text-center">
                         Ser una empresa reconocida de comercio electrónico en el mundo, preferida por la
                         eficiencia seguridad y transparencia en todos los procesos.
                     </p>
                 </div>
 
-                <div class="sec-nosotros">
+                <div class="sec-nosotros" data-aos="fade-up" data-aos-once="true">
                     <div class="page-header">
                         <h3 class="text-uppercase text-center">Antecedentes de la Compañía</h3>
+                        <img src="{{ asset('images/company.png') }}" alt="" class="img-responsive center-block">
+
                     </div>
-                    <p>
+                    <p class="text-center">
                         Nuestra compañía orgullosamente Colombiana cuenta con un año como sociedad
                         constituida, sin embargo las personas que trabajamos en ella conformamos un equipo
                         multidisciplinario con más de 10 años de experiencia en el sector de servicios electrónicos,
@@ -106,5 +110,11 @@
 @endsection
 @push('scripts')
 <script type="text/javascript">
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
 </script>
 @endpush

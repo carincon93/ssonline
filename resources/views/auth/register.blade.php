@@ -18,7 +18,7 @@
                         Diligencia el siguiente formulario.
                         El registro es totalmente gratis.
                     </p>
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -40,6 +40,19 @@
                                 @if ($errors->has('email'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('foto') ? ' has-error' : '' }}">
+                            <div class="">
+                                <label for="foto">Foto</label>
+                                <input id="foto" type="file" class="form-control" name="foto" required>
+
+                                @if ($errors->has('foto'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('foto') }}</strong>
                                 </span>
                                 @endif
                             </div>

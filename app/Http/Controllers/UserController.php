@@ -71,13 +71,20 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = user::find($id);
+        $user = User::find($id);
         $user->name               = $request->get('name');
         $user->email              = $request->get('email');
+        
+        if ($request->file('foto')) {
+            $file_foto           = $request->file('foto')->getClientOriginalName();
+            $user->foto = '/images/' . $file_foto;
+            $request->foto->move(public_path('/images'), $file_foto);
+        }
+
         $user->sitio_web          = $request->get('sitio_web');
         $user->password           = bcrypt( $request->input('password') );
         if ($user->save()) {
-            return redirect('admin/usuario')->with('status', 'El Usuario '.$user->name.' fue modificado con exito!');
+            return redirect('admin/home')->with('status', 'El Usuario '.$user->name.' fue modificado con exito!');
         }
     }
 

@@ -3,7 +3,7 @@
 @section('title', 'Inicio')
 
 @section('content')
-    @include('layouts.navbar-welcome')
+    @include('layouts.navbar-pages')
     @if ($errors->has('token_error'))
     <!-- Modal -->
     <div class="modal fade" id="modalSession" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -38,7 +38,7 @@
     <div class="info-welcome">
         <div class="container">
             <img src="{{ asset('images/laptop.png')}}" alt="laptop" class="img-responsive center-block">
-            <h2 class="text-center">Empieza a usar SSOnline</h2>
+            <h1 class="text-center">Empieza a usar SSOnline</h1>
 
             <div class="row">
                 <div class="col-md-4">

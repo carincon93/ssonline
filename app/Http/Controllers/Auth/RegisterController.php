@@ -63,9 +63,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        if ($data['foto']) {
+            $file = time().'.'.$data['foto']->getClientOriginalExtension();
+            $data['foto']->move(public_path('images'), $file);
+        }
         return User::create([
             'name'      => $data['name'],
             'email'     => $data['email'],
+            'foto' => "/images/" . $file,
             'sitio_web' => $data['sitio_web'],
             'password'  => bcrypt($data['password']),
         ]);

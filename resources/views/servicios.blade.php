@@ -14,8 +14,9 @@
     <div class="container section">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <div class="padding-article">
-                    <h3 class="text-uppercase">Servicios estratégicos</h3>
+                <div class="padding-article" data-aos="fade-up" data-aos-once="true">
+                    <h3 class="text-uppercase text-center">Servicios estratégicos</h3>
+                    <img src="{{ asset('images/chess.png') }}" alt="" class="img-responsive center-block">
                     <ul class="list-politicas">
                         @foreach($servicios as $servicio)
                         @if($servicio->tipo_servicio == 'servicios estrategicos')
@@ -24,8 +25,9 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="padding-article">
-                    <h3 class="text-uppercase">Servicios tecnológicos</h3>
+                <div class="padding-article" data-aos="fade-up" data-aos-once="true">
+                    <h3 class="text-uppercase text-center">Servicios tecnológicos</h3>
+                    <img src="{{ asset('images/technology.png') }}" alt="" class="img-responsive center-block">
                     <ul class="list-politicas">
                         @foreach($servicios as $servicio)
                         @if($servicio->tipo_servicio == 'servicios tecnologicos')
@@ -34,8 +36,9 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="padding-article">
-                    <h3 class="text-uppercase">Servicios interactivos</h3>
+                <div class="padding-article" data-aos="fade-up" data-aos-once="true">
+                    <h3 class="text-uppercase text-center">Servicios interactivos</h3>
+                    <img src="{{ asset('images/web.png') }}" alt="" class="img-responsive center-block">
                     <ul class="list-politicas">
                         @foreach($servicios as $servicio)
                         @if($servicio->tipo_servicio == 'servicios interactivos')
@@ -56,5 +59,11 @@
 @endsection
 @push('scripts')
 <script type="text/javascript">
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
 </script>
 @endpush

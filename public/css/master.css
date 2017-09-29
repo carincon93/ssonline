@@ -80,7 +80,7 @@ Servicios
 ========================================================================== */
 .logo-servicios {
     -webkit-animation-delay: 0.8s;
-    color: #e5b3b3;
+    color: #f3af4a;
     font-size: 8rem;
 }
 
@@ -99,16 +99,16 @@ Contáctanos
     padding-left: 4rem;
 }
 #form-contact .form-control::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: #cc8d8d;
+    color: #fff;
 }
 #form-contact .form-control::-moz-placeholder { /* Firefox 19+ */
-    color: #cc8d8d;
+    color: #fff;
 }
 #form-contact .form-control:-ms-input-placeholder { /* IE 10+ */
-    color: #cc8d8d;
+    color: #fff;
 }
 #form-contact .form-control:-moz-placeholder { /* Firefox 18- */
-    color: #cc8d8d;
+    color: #fff;
 }
 
 .info-contact {
@@ -119,36 +119,27 @@ Contáctanos
     color: #fff;
 }
 .title-contact {
-    color: #cc8d8d;
+    color: #fff;
     margin-bottom: 5rem;
 }
 .title-contact + p {
-    color: #cc8d8d;
+    color: #fff;
     font-size: 12px;
     margin-bottom: 4rem;
 }
 .text-contact {
     background: transparent;
-    border-bottom: 1px solid #681515 !important;
+    border-bottom: 1px solid #f9bc62 !important;
     border-radius: 0px;
     box-shadow: none;
 }
 .left-part-contact {
-    background : -moz-linear-gradient(0% 50% 0deg,rgba(85, 37, 37, 1) 0%,rgba(56, 0, 0, 1) 100%);
-    background : -webkit-linear-gradient(0deg, rgba(85, 37, 37, 1) 0%, rgba(56, 0, 0, 1) 100%);
-    background : -webkit-gradient(linear,0% 50% ,100% 50% ,color-stop(0,rgba(85, 37, 37, 1) ),color-stop(1,rgba(56, 0, 0, 1) ));
-    background : -o-linear-gradient(0deg, rgba(85, 37, 37, 1) 0%, rgba(56, 0, 0, 1) 100%);
-    background : -ms-linear-gradient(0deg, rgba(85, 37, 37, 1) 0%, rgba(56, 0, 0, 1) 100%);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#552525', endColorstr='#380000' ,GradientType=0)";
-    background : linear-gradient(90deg, rgba(85, 37, 37, 1) 0%, rgba(56, 0, 0, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#552525',endColorstr='#380000' , GradientType=1);
-
+    background: #ff9800;
     color: #fff;
-
     padding: 5rem;
 }
 .btn-contactanos {
-    background: #842020;
+    background: #f9bc62;
     border-radius: 4rem;
     color: #fff;
     display: block;
@@ -161,7 +152,7 @@ Contáctanos
     color: #eee;
 }
 .input-contactanos {
-    background: #681515;
+    background: #f9bc62;
     border-radius: 0px;
 }
 
@@ -222,16 +213,16 @@ Welcome
 }
 .carousel-btn {
     color: #fff;
-    background: #4a1818;
+    background: #f07c06;
     padding: 0.8rem 5rem;
     transition: all 0.4s ease 0s;
 }
 .carousel-btn:hover {
-    background: #371010;
+    background: #ce620a;
     color: #fff;
 }
 .info-welcome {
-    background: radial-gradient(circle farthest-side at center bottom,#542424,#400a0a 125%);
+    background: radial-gradient(circle farthest-side at center bottom,#f78a03,#e05e0c 125%);
     color: #fff;
     margin-top: 70rem;
     padding: 10rem 0 13rem;
@@ -295,26 +286,29 @@ Nosotros
 /* ==========================================================================
 Footer
 ========================================================================== */
-.footer-welcome,
-.footer {
+.footer,
+.footer-welcome {
     background-color: #f5f5f5;
     border-top: 1px solid #ddd;
-    color: #4e4e4e;
+    color: #fff;
     height: 60px;
     padding-top: 20px;
 }
 
+.footer {
+    color: #444;
+}
+
 .footer-principal,
 .footer-welcome {
-    background : -moz-linear-gradient(0% 50% 0deg,rgba(85, 37, 37, 1) 0%,rgba(56, 0, 0, 1) 100%);
-    background : -webkit-linear-gradient(0deg, rgba(85, 37, 37, 1) 0%, rgba(56, 0, 0, 1) 100%);
-    background : -webkit-gradient(linear,0% 50% ,100% 50% ,color-stop(0,rgba(85, 37, 37, 1) ),color-stop(1,rgba(56, 0, 0, 1) ));
-    background : -o-linear-gradient(0deg, rgba(85, 37, 37, 1) 0%, rgba(56, 0, 0, 1) 100%);
-    background : -ms-linear-gradient(0deg, rgba(85, 37, 37, 1) 0%, rgba(56, 0, 0, 1) 100%);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#552525', endColorstr='#380000' ,GradientType=0)";
-    background : linear-gradient(90deg, rgba(85, 37, 37, 1) 0%, rgba(56, 0, 0, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#552525',endColorstr='#380000' , GradientType=1);
-    color: #d2d2d2;
+      background : -moz-linear-gradient(0% 50% 0deg,rgba(255, 152, 0, 1) 0%,rgba(221, 89, 13, 1) 100%);
+      background : -webkit-linear-gradient(0deg, rgba(255, 152, 0, 1) 0%, rgba(221, 89, 13, 1) 100%);
+      background : -webkit-gradient(linear,0% 50% ,100% 50% ,color-stop(0,rgba(255, 152, 0, 1) ),color-stop(1,rgba(221, 89, 13, 1) ));
+      background : -o-linear-gradient(0deg, rgba(255, 152, 0, 1) 0%, rgba(221, 89, 13, 1) 100%);
+      background : -ms-linear-gradient(0deg, rgba(255, 152, 0, 1) 0%, rgba(221, 89, 13, 1) 100%);
+      -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF9800', endColorstr='#DD590D' ,GradientType=0)";
+      background : linear-gradient(90deg, rgba(255, 152, 0, 1) 0%, rgba(221, 89, 13, 1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF9800',endColorstr='#DD590D' , GradientType=1);
 }
 .footer-principal {
     padding: 6rem 0rem;
@@ -330,7 +324,10 @@ Footer
     line-height: 2.4;
 }
 .footer-welcome {
-    border-top: 1px solid #681515;
+    border-top: 1px solid #eee;
+}
+.list-footer {
+    color: #fff;
 }
 
 
@@ -376,13 +373,13 @@ Login
 }
 .btn-register,
 .btn-login {
-    background-color: #5f1818;
+    background-color: #f07c06;
     color: #fff;
     transition: all 0.4s ease 0s;
 }
 .btn-register,
 .btn-login:hover {
-    background-color: #410e0e;
+    background-color: #ce620a;
     color: #fff;
 }
 
@@ -416,6 +413,24 @@ Login
 /* ==========================================================================
 Dashboard
 ========================================================================== */
+.card-dashboard {
+    background: #eee;
+    display: block;
+    height: 18rem;
+}
+.icon-dashboard {
+    margin-top: 4rem;
+}
+.foto-perfil {
+    border-radius: 50%;
+    height: 120px;
+    margin-bottom: 0.5rem;
+    width: 120px;
+}
+.user-name {
+    display: block;
+    padding: 1rem;
+}
 #sidebar {
     background: #eee;
     padding: 1rem;

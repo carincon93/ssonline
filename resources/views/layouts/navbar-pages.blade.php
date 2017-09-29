@@ -24,6 +24,7 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ url('/') }}">Inicio</a></li>
                 <li><a href="{{ url('nosotros') }}">Nosotros</a></li>
                 <li><a href="{{ url('capacidad_respuesta') }}">Capacidad de respuesta</a></li>
                 <li><a href="{{ url('seguridad') }}">Seguridad</a></li>
@@ -42,6 +43,10 @@
                             @if( Auth::user()->rol == 'admin')
                             <li>
                                 <a href="{{ url('/admin/home') }}">Dashboard</a>
+                            </li>
+                            @else
+                            <li>
+                                <a href="{{ url('/admin/home') }}">Mi perfil</a>
                             </li>
                             @endif
                             <li>
